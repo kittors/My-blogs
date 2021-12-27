@@ -46,10 +46,9 @@ module.exports = {
     },
     friendLink: [
       {
-        title: '午后南杂',
-        desc: 'Enjoy when you can, and endure when you must.',
-        email: '1156743527@qq.com',
-        link: 'https://www.recoluan.com'
+        title: '派大星',
+        desc: '做一个极致的人',
+        link: 'https://pdxalive.vercel.app/'
       },
       {
         title: '专业吃泡面',
