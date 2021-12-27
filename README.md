@@ -1,7 +1,7 @@
 ---
 home: true
-heroText: vuepress-theme-reco
-tagline: A simple and beautiful vuepress blog theme.
+heroText: 至于至善
+tagline: 大学之道，在明明德，在亲民，在止于至善。
 # heroImage: /hero.png
 # heroImageStyle: {
 #   maxWidth: '600px',

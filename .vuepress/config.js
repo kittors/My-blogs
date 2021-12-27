@@ -1,6 +1,6 @@
 module.exports = {
-  title: "vuepress-theme-reco",
-  description: 'A simple and beautiful vuepress blog theme .',
+  title: "ThinkDifferent",
+  description: 'The ultimate value of life lies in the ability to awaken and think, not just in survival.',
   dest: 'public',
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }],
@@ -52,10 +52,11 @@ module.exports = {
         link: 'https://www.recoluan.com'
       },
       {
-        title: 'vuepress-theme-reco',
-        desc: 'A simple and beautiful vuepress Blog & Doc theme.',
+        title: '专业吃泡面',
+        desc: '人生最终的价值在于觉醒和思考的能力,而不只在于生存',
+        email:'364299311@qq.com',
         avatar: "https://vuepress-theme-reco.recoluan.com/icon_vuepress_reco.png",
-        link: 'https://vuepress-theme-reco.recoluan.com'
+        link: 'https://space.bilibili.com/456009975'
       },
     ],
     logo: '/logo.png',
@@ -71,9 +72,9 @@ module.exports = {
     // 作者头像
     authorAvatar: '/avatar.jpg',
     // 备案号
-    record: 'xxxx',
+    record: '364299311@qq.com',
     // 项目开始时间
-    startYear: '2021'
+    startYear: '2021',
     /**
      * 密钥 (if your blog is private)
      */
