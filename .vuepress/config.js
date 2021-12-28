@@ -1,6 +1,6 @@
 module.exports = {
   title: "ThinkDifferent",
-  description: 'The ultimate value of life lies in the ability to awaken and think, not just in survival.',
+  description: 'A journey of a thousand miles begins with a single step.',
   dest: 'public',
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }],
@@ -48,13 +48,14 @@ module.exports = {
       {
         title: '派大星',
         desc: '做一个极致的人',
-        link: 'https://pdxalive.vercel.app/'
+        link: 'https://pdxalive.vercel.app/',
+        logo:'/paidaxing.jpg',
       },
       {
         title: '专业吃泡面',
         desc: '人生最终的价值在于觉醒和思考的能力,而不只在于生存',
         email:'364299311@qq.com',
-        avatar: "https://vuepress-theme-reco.recoluan.com/icon_vuepress_reco.png",
+        logo:'/avatar.jpg',
         link: 'https://space.bilibili.com/456009975'
       },
     ],
