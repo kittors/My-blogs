@@ -51,7 +51,7 @@ React的编写方式：
 
   ## React封装方式
 
-  ```react
+  ```html
   <!DOCTYPE html>
   <html lang="en">
   
@@ -98,7 +98,7 @@ React的编写方式：
   
   只有一些细节上的不同。
   
-  ```react
+  ```html
   <!DOCTYPE html>
   <html lang="en">
   
@@ -144,7 +144,7 @@ React的编写方式：
   - 函数组件 rfc react function component
   - 类组件 rcc react class component
 
-```react
+```html
 <!DOCTYPE html>
 <html lang="en">
 
