@@ -89,10 +89,10 @@ module.exports = {
      * valine 设置 (if you need valine comment )
      */
 
-    // valineConfig: {
-    //   appId: '...',// your appId
-    //   appKey: '...', // your appKey
-    // }
+    valineConfig: {
+      appId: '...',// your appId
+      appKey: '...', // your appKey
+    }
   },
   markdown: {
     lineNumbers: true
