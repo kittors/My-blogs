@@ -1,80 +1,85 @@
 module.exports = {
-  title: "ThinkDifferent",
-  description: 'A journey of a thousand miles begins with a single step.',
-  dest: 'public',
+  title: "一个小小的前端技术库",
+  description: "梦想应该是星辰大海",
+  dest: "public",
   head: [
-    ['link', { rel: 'icon', href: '/favicon.ico' }],
-    ['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no' }]
+    ["link", { rel: "icon", href: "/favicon.ico" }],
+    [
+      "meta",
+      {
+        name: "viewport",
+        content: "width=device-width,initial-scale=1,user-scalable=no",
+      },
+    ],
   ],
-  theme: 'reco',
+  theme: "reco",
   themeConfig: {
     nav: [
-      { text: '主页', link: '/', icon: 'reco-home' },
-      { text: '时间线', link: '/timeline/', icon: 'reco-date' },
-      { text: '文件', 
-        icon: 'reco-message',
-        items: [
-          { text: 'vuepress-reco', link: '/docs/theme-reco/' }
-        ]
+      { text: "主页", link: "/", icon: "reco-home" },
+      { text: "时间线", link: "/timeline/", icon: "reco-date" },
+      {
+        text: "文件",
+        icon: "reco-message",
+        items: [{ text: "vuepress-reco", link: "/docs/theme-reco/" }],
       },
-      { text: '联系',  //contact
-        icon: 'reco-message',
+      {
+        text: "联系", //contact
+        icon: "reco-message",
         items: [
-          { text: 'GitHub', link: 'https://github.com/kittors', icon: 'reco-github' }
-        ]
-      }
+          {
+            text: "GitHub",
+            link: "https://github.com/WTaoSoldier",
+            icon: "reco-github",
+          },
+        ],
+      },
     ],
     sidebar: {
-      '/docs/theme-reco/': [
-        '',
-        'theme',
-        'plugin',
-        'api'
-      ]
-    },  
-    type: 'blog',
+      "/docs/theme-reco/": ["", "theme", "plugin", "api"],
+    },
+    type: "blog",
     // 博客设置
     blogConfig: {
       category: {
         location: 2, // 在导航栏菜单中所占的位置，默认2
-        text: '分类' // 默认 “分类”
+        text: "分类", // 默认 “分类”
       },
       tag: {
         location: 3, // 在导航栏菜单中所占的位置，默认3
-        text: '标签' // 默认 “标签”
-      }
+        text: "标签", // 默认 “标签”
+      },
     },
     friendLink: [
       {
-        title: '派大星',
-        desc: '做一个极致的人',
-        link: 'https://pdxalive.vercel.app/',
-        logo:'/paidaxing.jpg',
+        title: "派大星",
+        desc: "做一个极致的人",
+        link: "https://pdxalive.vercel.app/",
+        logo: "/paidaxing.jpg",
       },
       {
-        title: '专业吃泡面',
-        desc: '人生最终的价值在于觉醒和思考的能力,而不只在于生存',
-        email:'364299311@qq.com',
-        logo:'/avatar.jpg',
-        link: 'https://space.bilibili.com/456009975'
+        title: "专业吃泡面",
+        desc: "人生最终的价值在于觉醒和思考的能力,而不只在于生存",
+        email: "364299311@qq.com",
+        logo: "/avatar.jpg",
+        link: "https://space.bilibili.com/456009975",
       },
     ],
-    logo: '/logo.png',
+    logo: "/logo.png",
     // 搜索设置
     search: true,
     searchMaxSuggestions: 10,
     // 自动形成侧边导航
     // sidebar: 'auto',
     // 最后更新时间
-    lastUpdated: 'Last Updated',
+    lastUpdated: "Last Updated",
     // 作者
-    author: 'Kittors',
+    author: "WuTao",
     // 作者头像
-    authorAvatar: '/avatar.jpg',
+    authorAvatar: "/avatar.jpg",
     // 备案号
-    record: '364299311@qq.com',
+    record: "364299311@qq.com",
     // 项目开始时间
-    startYear: '2021',
+    startYear: "2021",
     /**
      * 密钥 (if your blog is private)
      */
@@ -90,11 +95,11 @@ module.exports = {
      */
 
     valineConfig: {
-      appId: '...',// your appId
-      appKey: '...', // your appKey
-    }
+      appId: "...", // your appId
+      appKey: "...", // your appKey
+    },
   },
   markdown: {
-    lineNumbers: true
-  }
-}  
+    lineNumbers: true,
+  },
+};
