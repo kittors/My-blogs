@@ -16,7 +16,7 @@ Hook React16.8 版本引入的新特性 为了能够让 rfc 函数组件使用�
 
 state 引入 useState
 
-```react
+```javascript
 const [uname,setUname] = useState('皮卡丘')
 ```
 
@@ -28,7 +28,7 @@ const [uname,setUname] = useState('皮卡丘')
 
 修改 state
 
-```react
+```html
 <button onClick={()=>setUname('雷丘')}></button>
 ```
 
@@ -50,7 +50,7 @@ useEffect 组件生命周期
 
 版本 5 目前使用较多 6 版本出来时间不长 还没有得到大规模使用
 
-```shell
+```javascript
 npm install react-router-dom@5
 #不写版本号  就版本6  最新版
 npm install react-router-dom
@@ -86,7 +86,7 @@ Redux
 
 类 Vuex 组件全局状态管理的 组件状态共享
 
-```react
+```javascript
 // 导入  createStore
 import { createStore } from "redux";
 const inistate = {
@@ -108,7 +108,7 @@ console.log(store.getState());
 
 ```
 
-```react
+```javascript
 // 导入  createStore
 import { createStore } from "redux";
 /**
