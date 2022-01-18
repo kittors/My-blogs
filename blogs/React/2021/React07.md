@@ -71,7 +71,7 @@ export default class App extends Component {
   componentDidMount() {
     const url = 'https://api.apiopen.top/getWangYiNews';
     // 发送请求调用接口
-    fetch(url)
+    fetch(url) 
       .then(res => res.json())
       .then(res => {
         console.log(res);
