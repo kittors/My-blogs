@@ -26,7 +26,7 @@ foreach 遍历不修改元数据
 
 - 添加渲染标签的时候，返回一个数组
 
-```react
+```javascript
 skill = ['uni-app','react']
 //foreach
 showALink(){
@@ -54,7 +54,7 @@ showAlink2 =()=>this.skill.map((item,index)=>(
 
 ## 发送请求 fetch 浏览器支持发送请求的新标准 对比 XHR
 
-```react
+```javascript
 fetch(url).then(res=>res.json()).then(res=>{
     console.log(res)
 })
@@ -72,7 +72,7 @@ hook
 
 hook 时 React16.8 的新增特性。它可以让你在不编写 class 的情况下使用 state 以及其他的 React 特性
 
-```react
+```javascript
 // rfc 函数组件快捷方式
 // react16.8版本后hook特性
 // hook特性 函数组件使用useState
@@ -102,7 +102,7 @@ export default function App() {
 
 # 生命周期 useEffect
 
-```react
+```javascript
 // 函数组件的hook特性，提供了函数组件生命周期
 // useEffect
 import React, { useEffect, useState } from "react";
@@ -198,7 +198,7 @@ npm uninstall react-router-dom
 
 `src\pages\A.js`
 
-```raect
+```javascript
 import React, { Component } from 'react'
 
 export default class A extends Component {
@@ -221,7 +221,7 @@ treesharking 树摇
 
 基于 ES6 模块机制
 
-```react
+```javascript
 import React, { Component } from "react";
 /**
  * 路由的组成
@@ -282,7 +282,7 @@ export default class App extends Component {
 
 `src/App.js`
 
-```react
+```javascript
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import HomePage from "./pages/HomePage";
@@ -322,7 +322,7 @@ export default class App extends Component {
 
 `src/pages/NewsPage.js`
 
-```react
+```javascript
 import React, { Component } from "react";
 
 export default class NewsPage extends Component {
@@ -393,7 +393,7 @@ export default class App extends Component {
 
 ```
 
-```react
+```javascript
 import React from 'react'
 import { useParams,useNavigate } from 'react-router-dom'
 // hook rfc 的特征

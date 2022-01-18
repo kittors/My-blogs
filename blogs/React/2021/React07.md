@@ -19,7 +19,7 @@ Image 组件 图片
 - 远程图片 `<Image src={{uri:'http://xxx.xxx.xxx/1.png'}} style={{width:200,height:180}}>`
   - `uri` 链接
   - 默认宽高为 0 不显示 需要设置宽高
-- 本地图片 <Image src={require('./assets/1.png')} style={{width:200,height:180}}>
+  - 本地图片 `<Image src={require('./assets/1.png')}` style={{width:200,height:180}}>
   - require 语法 习惯存放目录为 assets
 
 Text 文本组件

@@ -7,6 +7,7 @@ tags:
 categories:
   - React
 ---
+
 # React03
 
 ## 语法学习
@@ -17,7 +18,7 @@ categories:
 
 #### 数组
 
-```react
+```html
 // rcc 类组件的快捷代码提示
 import React, { Component } from "react";
 
@@ -75,9 +76,7 @@ export default class App extends Component {
 
 ### 数组对象
 
-
-
-```react
+```html
 import React, { Component } from "react";
 
 export default class App extends Component {
@@ -124,15 +123,11 @@ export default class App extends Component {
 
 ```
 
+### map 方法遍历
 
+map 语法 会处理数组的元素直接返回新数组
 
-
-
-### map方法遍历
-
-map语法 会处理数组的元素直接返回新数组
-
-```react
+```html
 // rcc 类组件的快捷代码提示
 import React, { Component } from "react";
 
@@ -161,9 +156,9 @@ export default class App extends Component {
 
 ```
 
-数组对象使用map语法
+数组对象使用 map 语法
 
-```react
+```html
 import React, { Component } from "react";
 
 export default class App extends Component {
@@ -219,69 +214,53 @@ export default class App extends Component {
 
 ### 生命周期
 
-`组件生命周期` 组件从开始到结束的整个过程。react提供了组件再各个生命节点的一些操作方法，这些方法称为`钩子函数`
+`组件生命周期` 组件从开始到结束的整个过程。react 提供了组件再各个生命节点的一些操作方法，这些方法称为`钩子函数`
 
 > `vue`的组件生命周期：created->mounted->updated->`destoryed`
 
-**`componentDidmount`组件挂载时触发 初始化操作和发送网络请求  ##重点**
+**`componentDidmount`组件挂载时触发 初始化操作和发送网络请求 ##重点**
 
-`shouldcomponentUpdate`组件将要更新 可以用来控制刷新DOM时机  重新绘制DOM 必须要有一个返回值  false代表不渲染  true代表渲染
+`shouldcomponentUpdate`组件将要更新 可以用来控制刷新 DOM 时机 重新绘制 DOM 必须要有一个返回值 false 代表不渲染 true 代表渲染
 
-`componentDidUpdate`组件状态更新时触发  监控到状态的变化  如果状态发生改变需要执行特定业务操作 可以写在这里 
+`componentDidUpdate`组件状态更新时触发 监控到状态的变化 如果状态发生改变需要执行特定业务操作 可以写在这里
 
-`componentWillUnmount`组件将要销毁时触发  回收资源操作
+`componentWillUnmount`组件将要销毁时触发 回收资源操作
 
 ### 网络请求
 
-客户端请求服务端接口，需要通过JS代码发送请求。是浏览器XHR对象
+客户端请求服务端接口，需要通过 JS 代码发送请求。是浏览器 XHR 对象
 
 不同的框架，对于`XHR对象`进行了`封装`
 
-> JQuery  $.get() $.post  $.ajax()
+> JQuery $.get() $.post $.ajax()
 >
 > Vue axios
 >
-> wx  wx.request
+> wx wx.request
 >
 > uni-app uni.request
 >
 > .....
 
-```react
-// rcc
-// 网络请求
-import React, { Component } from "react";
-
-export default class App extends Component {
-  componentDidMount() {
-    // 发送请求写在这里
-    const url = "https://api.apiopen.top/getWangYiNews";
-    // get请求
-    // res.json()处理数据为json对象格式
-    fetch(url)
-      .then((res) => res.json())
-      .then((res) => {
-        console.log(res);
-      });
-  }
-  render() {
-    return <div></div>;
-  }
-}
-
+```html
+// rcc // 网络请求 import React, { Component } from "react"; export default
+class App extends Component { componentDidMount() { // 发送请求写在这里 const
+url = "https://api.apiopen.top/getWangYiNews"; // get请求 //
+res.json()处理数据为json对象格式 fetch(url) .then((res) => res.json())
+.then((res) => { console.log(res); }); } render() { return
+<div></div>
+; } }
 ```
-
-
 
 ### 跨域代理
 
-浏览器端因为`同源策略`的安全机制，存在跨域问题。一般开发过程中，使用proxy代理方式解决。
+浏览器端因为`同源策略`的安全机制，存在跨域问题。一般开发过程中，使用 proxy 代理方式解决。
 
-vue框架：
+vue 框架：
 
 `vue.config.js`
 
-react需要安装一个代理插件`http-proxy-middleware`
+react 需要安装一个代理插件`http-proxy-middleware`
 
 ①**在项目包根路劲安装代理插件**
 
@@ -291,9 +270,7 @@ npm i http-proxy-middleware
 
 安装之后在项目包的`package.json`中查看依赖，是否安装成功了
 
-
-
-在src路径创建一个setupProxy.js文件存放代理的设置
+在 src 路径创建一个 setupProxy.js 文件存放代理的设置
 
 ```javascript
 // /src/setupProxy.js路径和文件名称注意写对
@@ -313,33 +290,14 @@ module.exports = function (app) {
     })
   );
 };
-
 ```
 
-
-
-```react
-// rcc
-// 网络请求
-import React, { Component } from "react";
-
-export default class App extends Component {
-  componentDidMount() {
-    this.getData();
-  }
-  getData() {
-    // 配合代理 需要修改url地址  添加一个表示信息
-    const url = "/douyu/api/room/list?type=yz";
-    fetch(url)
-      .then((res) => res.json())
-      .then((res) => {
-        console.log(res);
-      });
-  }
-  render() {
-    return <div></div>;
-  }
-}
-
+```html
+// rcc // 网络请求 import React, { Component } from "react"; export default
+class App extends Component { componentDidMount() { this.getData(); } getData()
+{ // 配合代理 需要修改url地址 添加一个表示信息 const url =
+"/douyu/api/room/list?type=yz"; fetch(url) .then((res) => res.json())
+.then((res) => { console.log(res); }); } render() { return
+<div></div>
+; } }
 ```
-

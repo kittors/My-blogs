@@ -14,7 +14,7 @@ categories:
 
 ## 商品页面回到顶部实现
 
-```react
+```javascript
 import React, {Component} from 'react';
 import {
   Text,
@@ -158,3 +158,117 @@ const ss = StyleSheet.create({
 });
 
 ```
+
+## 商品详情页面
+
+```javascript
+import React, {Component} from 'react';
+import {
+  Text,
+  View,
+  Dimensions,
+  Image,
+  ScrollView,
+  FlatList,
+} from 'react-native';
+// RN中引入
+import AutoHeightWebView from 'react-native-autoheight-webview';
+const rpx = x => (Dimensions.get('window').width / 750) * x;
+export default class DetailPage extends Component {
+  state = {details: null};
+  componentDidMount() {
+    // 接收传递的商品id并发送请求
+    const {lid} = this.props.route.params;
+    // console.log(lid);
+    const url =
+      'http://www.codeboy.com:9999/data/product/details.php?lid=' + lid;
+    // console.log(url);
+    fetch(url)
+      .then(res => res.json())
+      .then(res => {
+        console.log(res);
+        this.setState({details: res.details});
+        // 启动定时器  实现图片轮播的切换
+        this.timer = setInterval(() => {
+          // 切换图片
+          this.current++;
+          //处理越界问题  最大的下标就是图片的数组的长度减一
+          const maxIndex = this.state.details.picList.length - 1;
+          if (this.current > maxIndex) this.current = 0;
+          this.f1.scrollToIndex({index: this.current});
+        }, 3000);
+      });
+  }
+  // 组件将要卸载
+  componentWillUnmount() {
+    // 销毁定时器
+    clearInterval(this.timer);
+  }
+  render() {
+    const {details} = this.state;
+    // 判断接口是否返回 未返回不渲染
+    if (details == null) return <View></View>;
+    return (
+      <ScrollView>
+        <Text
+          style={{borderBottomWidth: 1, fontSize: rpx(30), padding: rpx(10)}}>
+          产品型号:{details.lname}
+        </Text>
+        {/* 轮播图 */}
+        <FlatList
+          data={details.picList}
+          keyExtractor={(item, index) => index}
+          renderItem={this._renderItem}
+          horizontal
+          pagingEnabled
+          onScroll={this._onScroll}
+          ref={el => (this.f1 = el)}></FlatList>
+        <View style={{padding: rpx(15), backgroundColor: 'white'}}>
+          {/* 商品名称 */}
+          <Text style={{fontSize: rpx(35), fontWeight: 'bold'}}>
+            {details.title}
+          </Text>
+          {/* 商品描述 */}
+          <Text style={{fontSize: rpx(30), color: 'gray'}}>
+            {details.subtitle}
+          </Text>
+          {/* 价格 */}
+          <Text style={{fontSize: rpx(40), color: 'red'}}>
+            ￥{details.price}
+          </Text>
+        </View>
+        {/* HTML 广告图 */}
+        <AutoHeightWebView
+          source={{html: this.htmlDetails()}}></AutoHeightWebView>
+      </ScrollView>
+    );
+  }
+  // 处理返回的HTML标签
+  htmlDetails = () => {
+    let details = this.state.details.details;
+    // 添加图片的域名和图片的宽度设置
+    details = details.replace(
+      /src="img/g,
+      'width="100%" src="http://www.codeboy.com:9999/img',
+    );
+    details = details.replace(/src="\/\//g, 'width="100%" src = "http://');
+    return details;
+  };
+  // 滚动第一个下标 0
+  current = 0;
+  _onScroll = e => {
+    e.persist();
+    const offset_x = e.nativeEvent.contentOffset.x;
+    const w = e.nativeEvent.layoutMeasurement.width;
+    this.current = Math.floor(offset_x / w);
+  };
+  // 轮播图片
+  _renderItem = ({item}) => (
+    <Image
+      source={{uri: 'http://www.codeboy.com:9999/' + item.md}}
+      style={{width: rpx(750), height: rpx(750)}}></Image>
+  );
+}
+
+```
+
