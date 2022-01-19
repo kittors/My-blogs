@@ -1,8 +1,8 @@
 ---
 home: true
-heroText: web前端技术库
-tagline: 千里之行 始于足下
-bgImage: /bac.png
+heroText: 一个小小web前端技术库
+tagline: 大學之道，在明明德，在親民，在止於至善。
+# bgImage: /bac.png
 # heroImage: /bac.jpg
 # heroImageStyle:
 #   {

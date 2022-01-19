@@ -1,6 +1,6 @@
 module.exports = {
-  title: "一个小小的前端技术库",
-  description: "梦想应该是星辰大海",
+  title: "TrinkDifferent",
+  description: "A thousand miles begins with a single step",
   dest: "public",
   head: [
     ["link", { rel: "icon", href: "/favicon.ico" }],
@@ -28,7 +28,7 @@ module.exports = {
         items: [
           {
             text: "GitHub",
-            link: "https://github.com/WTaoSoldier",
+            link: "https://github.com/kittors",
             icon: "reco-github",
           },
         ],
