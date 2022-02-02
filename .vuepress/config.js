@@ -1,5 +1,5 @@
 module.exports = {
-  title: "TrinkDifferent",
+  title: "TinkDifferent",
   description: "A thousand miles begins with a single step",
   dest: "public",
   head: [
