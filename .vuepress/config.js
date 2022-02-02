@@ -73,7 +73,7 @@ module.exports = {
     // 最后更新时间
     lastUpdated: "Last Updated",
     // 作者
-    author: "WuTao",
+    author: "Kittors",
     // 作者头像
     authorAvatar: "/avatar.jpg",
     // 备案号
