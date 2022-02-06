@@ -1,5 +1,5 @@
 module.exports = {
-  title: "TinkDifferent",
+  title: "ThinkDifferent",
   description: "A thousand miles begins with a single step",
   dest: "public",
   head: [
